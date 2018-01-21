@@ -1,6 +1,11 @@
 # Site navigation links
 
-- title:
-  url:
-  excerpt:
+- title: My CV
+  url: /CV
+  excerpt: "Link to my CV"
+  image:
+
+- title: Test2
+  url: /test
+  excerpt: "Link to my CV"
   image:
