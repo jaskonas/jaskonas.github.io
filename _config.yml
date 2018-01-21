@@ -1,41 +1,32 @@
 # Site wide configuration
-
-title: "Jon Askonas"
 description: "This is a description of my awesome site."
-logo: # 120x120 px default image used for Twitter summary card
-teaser: mirv1.jpg # 400x250 px default teaser image used in image archive grid
 locale: en
-url: "www.jaskonas.com"
-feed:
-  path: atom.xml
+logo: ~
+path: atom.xml
+teaser: mirv1.jpg
+title: "Jon Askonas"
+url: www.jaskonas.com
 
 # Jekyll configuration
 
-sass:
-  sass_dir: _sass
-  style: compressed
-permalink: /:categories/:title/
-kramdown:
-  toc_levels: 1..2
-highlighter: rouge
 gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+highlighter: rouge
+kramdown:
+  toc_levels: "1..2"
+permalink: "/:categories/:title/"
+sass:
+  sass_dir: _sass
+  style: compressed
 
 
-# Site owner
+#Site owner
+avatar: jaskonas_portrait.png
+name: "Jon Askonas"
 owner: "Jon Askonas"
-  name: "Jon Askonas"
-  email:
-  twitter: "@jonaskonas"
-  google:
-    ad-client:
-    ad-slot:
-  bio:
-  avatar: jaskonas_portrait.png # 160x160 px image for author byline
-  disqus-shortname:
-
+twitter: "@jonaskonas"
 
 include:
   - .htaccess
