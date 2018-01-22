@@ -1,6 +1,6 @@
 ---
 layout: articles
-permalink: /test/
+permalink: www.jaskonas.com/test/
 title: "Latest Posts"
 ---
 TEST stuff
