@@ -1,4 +1,4 @@
 ---
 layout: post
-permalink: /CV
+permalink: /CV/
 title: "Latest Posts"

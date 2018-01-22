@@ -1,4 +1,4 @@
 ---
 layout: archive
-permalink: /test
+permalink: /test/
 title: "Latest Posts"
