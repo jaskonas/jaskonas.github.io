@@ -1,4 +1,5 @@
 ---
-layout: archive
+layout: articles
 permalink: /test/
 title: "Latest Posts"
+---
