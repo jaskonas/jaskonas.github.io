@@ -14,9 +14,10 @@ I am grateful for the generous support of the following organizations:
 + [Georgetown University](www.georgetown.edu)
 + [The Mercatus Center](https://www.mercatus.org/)
 
-
+<!---
 <div class="tiles">
 {% for post in site.posts %}
 	{% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->
+--->
