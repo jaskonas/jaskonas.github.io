@@ -1,5 +1,10 @@
 # Site navigation links
 
+- title: Research
+  url: /research
+  excerpt: "Research Projects"
+  image:
+
 - title: Data
   url: /data
   excerpt: "Links to datasets I have built"

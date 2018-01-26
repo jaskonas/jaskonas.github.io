@@ -1,7 +1,11 @@
 ---
 layout: archive
-permalink: /data/
-title: "Data"
+permalink: /research/
+title: "Research"
 ---
 
-*Coming Soon*
+<div class="tiles">
+{% for post in site.categories.research %}
+{% include post-grid.html %}
+{% endfor %}
+</div><!-- /.tiles -->
