@@ -19,5 +19,4 @@ I am grateful for the generous support of the following organizations:
 {% for post in site.posts %}
 	{% include post-grid.html %}
 {% endfor %}
-</div><!-- /.tiles -->
---->
+</div><!-- /.tiles --> -->
