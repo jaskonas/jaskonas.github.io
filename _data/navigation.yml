@@ -1,11 +1,10 @@
 # Site navigation links
 
-- title: My CV
-  url: /CV/
-  excerpt: "Link to my CV"
+- title: data
+  url: /data
+  excerpt: "Links to datasets I have built"
   image:
-
-- title: Test2
-  url: /test/
+- title: CV
+  url: /jaskonas_cv.pdf
   excerpt: "Link to my CV"
   image:
