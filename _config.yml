@@ -14,6 +14,7 @@ gems:
   - jekyll-gist
   - jekyll-feed
   - jekyll-extlinks
+
 highlighter: rouge
 kramdown:
   toc_levels: "1..2"
@@ -23,6 +24,7 @@ sass:
   style: compressed
 extlinks:
   attributes: {rel: nofollow, target: _blank}
+  rel_exclude: ['jaskonas.com', 'www.jaskonas.com']
 
 #Google Analytics
 google_analytics: UA-113136414-2
