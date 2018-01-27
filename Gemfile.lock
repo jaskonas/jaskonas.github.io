@@ -105,6 +105,9 @@ GEM
       rouge (~> 2)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
+    jekyll-extlinks (0.0.4)
+      jekyll (~> 3.0)
+      nokogiri (~> 1.6)
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
     jekyll-gist (1.4.1)
@@ -238,9 +241,11 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll
+  jekyll-extlinks
   jekyll-feed
   jekyll-gist
   jekyll-sitemap
+  nokogiri
 
 BUNDLED WITH
    1.16.1

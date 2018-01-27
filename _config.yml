@@ -13,6 +13,7 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-extlinks
 highlighter: rouge
 kramdown:
   toc_levels: "1..2"
@@ -20,7 +21,11 @@ permalink: "/:categories/:title/"
 sass:
   sass_dir: _sass
   style: compressed
+extlinks:
+  attributes: {rel: nofollow, target: _blank}
 
+#Google Analytics
+google_analytics: UA-113136414-2
 
 #Site owner
 avatar: jaskonas_portrait.png
