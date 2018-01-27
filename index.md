@@ -9,14 +9,13 @@ I am a [DPhil Candidate in International Relations](https://www.politics.ox.ac.u
 I am grateful for the generous support of the following organizations:
 
 + [The Smith Richardson Foundation](https://www.srf.org/)
-+ [The Cyris Foster Fund](www.politics.ox.ac.uk)
++ [The Cyris Foster Fund](http://www.politics.ox.ac.uk)
 + [The Beinecke Scholarship](http://fdnweb.org/beinecke/)
-+ [Georgetown University](www.georgetown.edu)
++ [Georgetown University](http://www.georgetown.edu)
 + [The Mercatus Center](https://www.mercatus.org/)
 
-<!---
 <div class="tiles">
 {% for post in site.posts %}
 	{% include post-grid.html %}
 {% endfor %}
-</div><!-- /.tiles --> -->
+</div><!-- /.tiles -->
