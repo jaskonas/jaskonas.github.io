@@ -32,24 +32,8 @@
    ========================================================================== */
 
 .btn-big {
-	display: inline-block;
-	padding: 8px 20px;
+	@extend .btn;
 	@include font-size(36);
-	font-family: $alt-font;
-	background-color: $primary-color;
-	color: $white;
-	text-decoration: none;
-	border: 0 !important;
-	border-radius: 10 * $border-radius;
-	@include transition(background 0.2s, border 0.2s);
-	&:hover {
-		color: $white;
-		background-color: lighten($primary-color, 10);
-	}
-	&:active {
-		// move button slightly on click
-		@include transform(translateY(1px));
-	}
 }
 
 /*
