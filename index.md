@@ -1,7 +1,9 @@
 ---
-layout: archive
+layout: home
 permalink: /
 title: ""
+image:
+    feature: rodchenko1.jpg
 ---
 
 I am a [Fellow at the Center for the Study of Statesmanship at the Catholic University of America](https://css.cua.edu/team-members/jonathan-askonas/) and a member of the [Politics faculty](http://politics.catholic.edu). I was previously a Predoctoral Research Fellow at the [Clements Center for National Security](http://www.clementscenter.org) at the University of Texas at Austin.

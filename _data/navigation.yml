@@ -10,7 +10,18 @@
   excerpt: "Links to datasets I have built"
   image:
 
+- title: Current Students
+  url: /studentdashboard
+  excerpt: "Dashboard for Current Students"
+  image:
+
+- title: Teaching
+  url: /teaching
+  excerpt: "Information about my Teaching"
+  image:
+
+
 - title: CV
-  url: /jaskonas_cv.pdf
+  url: /jaskonaspublic_cv.pdf
   excerpt: "Link to my CV"
   image:
