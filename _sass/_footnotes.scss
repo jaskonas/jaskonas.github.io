@@ -4,11 +4,27 @@
 
 .footnotes {
   font-family: $alt-font;
+  margin-top: (0px + $doc-line-height);
+  padding-top: (0px + $doc-line-height) / 2;
+  border-top: 1px solid $border-color;
   p, li {
-    @include font-size(12,no);
+    @include font-size(13,no);
+    color: lighten($text-color, 15);
   }
   &:before {
-    content: 'Footnotes:';
-    font-weight: 700;
+    content: 'Notes';
+    display: block;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    @include font-size(11,no);
+    color: lighten($text-color, 35);
+    margin-bottom: 0.5em;
+  }
+  ol {
+    margin-top: 0.25em;
+  }
+  a.reversefootnote {
+    color: lighten($text-color, 30);
+    &:hover { color: $link-color; }
   }
 }

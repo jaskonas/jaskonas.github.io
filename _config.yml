@@ -1,5 +1,5 @@
 # Site wide configuration
-description: "This is a description of my awesome site."
+description: "Jon Askonas — political scientist, military historian, and technology scholar at the Catholic University of America and the U.S. Department of State Policy Planning Staff."
 locale: en
 logo: ~
 path: atom.xml
