@@ -19,18 +19,19 @@
 /* MIRV ASCII art block */
 
 #mirv-wrap {
-	background: #070604;
-	margin: (2 * (0px + $doc-line-height)) (-1 * $gutter);
-	padding: $gutter;
+	background: transparent;
+	margin: (2 * (0px + $doc-line-height)) 0;
+	padding: 0;
 	overflow-x: auto;
 	cursor: crosshair;
 }
 
 #mirv {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 9px;
-	line-height: 1.18;
-	color: #a88b42;
+	font-size: 11px;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	color: lighten($text-color, 30);
 	margin: 0;
 	padding: 0;
 	background: transparent;
@@ -40,7 +41,7 @@
 }
 
 #mirv-wrap:hover #mirv {
-	color: #d4b468;
+	color: $link-color;
 }
 
 .mirv-caption {
@@ -49,10 +50,9 @@
 	font-size: 10px;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	color: #a88b42;
+	color: lighten($text-color, 45);
 	text-align: right;
 	margin-top: 4px;
-	opacity: 0.6;
 }
 
 pre.ascii-art {

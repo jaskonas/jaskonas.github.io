@@ -7,8 +7,8 @@ title: ""
 <div id="mirv-wrap"><pre id="mirv" aria-label="MIRV reentry vehicles in test"></pre><span class="mirv-caption">MK 21 RV &middot; Peacekeeper MIRV test &middot; hover</span></div>
 <script>
 (function(){
-  var COLS=90;
-  var CHARS=' .,:;+=|/!*#@';
+  var COLS=110;
+  var THRESH=155;
   var img=new Image();
   img.onload=function(){
     var rows=Math.round(COLS*(img.naturalHeight/img.naturalWidth)*0.5);
@@ -23,8 +23,8 @@ title: ""
       for(var x=0;x<COLS;x++){
         var i=(y*COLS+x)*4;
         var lum=px[i]*0.299+px[i+1]*0.587+px[i+2]*0.114;
-        row.push(CHARS[Math.round(lum/255*(CHARS.length-1))]);
-        if(lum>165)bright.push([x,y]);
+        row.push(lum>THRESH ? '/' : ' ');
+        if(lum>THRESH)bright.push([x,y]);
       }
       base.push(row);
     }
@@ -32,7 +32,7 @@ title: ""
     function draw(a){pre.textContent=a.map(function(r){return r.join('');}).join('\n');}
     draw(base);
     var raf,on=false,t=0;
-    var seq=['/','|','/','\\','!','|','/','|','\\','/','!','|'];
+    var seq=['/','|','/','\\','|','/'];
     function tick(){
       if(!on)return;
       var a=base.map(function(r){return r.slice();});
