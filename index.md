@@ -2,6 +2,8 @@
 layout: home
 permalink: /
 title: ""
+image:
+  feature: mirv3.png
 ---
 
 <div id="mirv-wrap"><pre id="mirv" aria-label="MIRV reentry vehicles in test"></pre><span class="mirv-caption">MK 21 RV &middot; Peacekeeper MIRV test &middot; hover</span></div>
