@@ -237,7 +237,7 @@ pre.ascii-art {
 			@include fill-parent;
 			// larger font for intro paragraph
 			> p {
-				&:first-child {
+				&:first-of-type {
 					@include font-size(20,yes,30);
 				}
 			}
