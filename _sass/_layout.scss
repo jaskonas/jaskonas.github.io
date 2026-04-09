@@ -57,15 +57,16 @@
 
 pre.ascii-art {
 	font-family: $code-font;
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 1.4;
-	color: lighten($text-color, 40);
+	color: lighten($text-color, 48);
 	background: transparent;
 	border: none;
 	overflow: visible;
-	margin: (0px + $doc-line-height) auto;
+	margin: (1.5 * (0px + $doc-line-height)) auto;
 	padding: 0;
 	text-align: center;
+	letter-spacing: 0.1em;
 }
 
 /* ==========================================================================
@@ -229,8 +230,13 @@ pre.ascii-art {
 	.page-title {
 		@include fill-parent;
 		padding-bottom: (0px + $doc-line-height);
-		border-bottom: 3px double $border-color;
+		border-bottom: 3px double mix($text-color, $border-color, 25%);
 		margin-bottom: (0px + $doc-line-height);
+		h1 {
+			letter-spacing: 0.06em;
+			font-variant: small-caps;
+			@include font-size(28,no);
+		}
 	}
 	@at-root {
 		.page-content {
