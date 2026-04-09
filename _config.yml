@@ -50,6 +50,7 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - LICENSE
+  - CLAUDE.md
   - README
   - Rakefile
   - config
