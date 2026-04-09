@@ -33,10 +33,16 @@ h1 {
 }
 h2 {
 	@include font-size(26);
-	margin-top: 2em;
+	margin-top: 2.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid $border-color;
 }
 h3 {
-	@include font-size(22);
+	@include font-size(20);
+	margin-top: 1.6em;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.01em;
 }
 h4 {
 	@include font-size(20);
@@ -46,6 +52,16 @@ h5 {
 }
 h6 {
 	@include font-size(16);
+}
+
+/* Emphasis */
+
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 600;
+	color: darken($text-color, 5);
 }
 
 /* Underlined text */
@@ -90,16 +106,22 @@ a {
 blockquote {
   padding-left: $gutter;
   padding-right: $gutter;
-  border-left: 6px solid $info-color;
+  border-left: 3px solid $link-color;
+  margin-left: 0;
   p {
-    font-family: $alt-font;
-    @include font-size(24);
+    font-family: $heading-font;
+    font-style: italic;
+    @include font-size(22);
+    color: lighten($text-color, 10);
   }
   cite {
-    font-family: $base-font;
-    font-weight: 700;
+    font-family: $alt-font;
+    font-variant: small-caps;
+    font-weight: 400;
     font-style: normal;
-    @include font-size(18);
+    letter-spacing: 0.06em;
+    @include font-size(14);
+    color: lighten($text-color, 30);
   }
 }
 

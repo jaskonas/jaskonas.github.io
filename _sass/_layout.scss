@@ -228,6 +228,9 @@ pre.ascii-art {
 	}
 	.page-title {
 		@include fill-parent;
+		padding-bottom: (0px + $doc-line-height);
+		border-bottom: 3px double $border-color;
+		margin-bottom: (0px + $doc-line-height);
 	}
 	@at-root {
 		.page-content {
