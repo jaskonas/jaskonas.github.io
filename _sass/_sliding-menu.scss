@@ -29,7 +29,7 @@
   display: block;
   width: $button-size * 2;
   height: $button-size * 2;
-  background: $primary-color;
+  background: $text-color;
   outline: 0;
   padding: 0;
   border: 2.5px solid transparent;
@@ -37,11 +37,11 @@
   z-index: 20;
   box-sizing: border-box;
   &:hover {
-    background: $black;
+    background: $link-color;
   }
   transition: $sliding-menu-animation;
   &.slide {
-    background: $danger-color;
+    background: $link-color;
     transform: translateX(0); /* don't slide close button on small screens only */
     @include media($medium) {
       transform: translateX(em(-600)); /* reset slide position */
@@ -87,7 +87,10 @@
     @include media($large) {
       margin-right: 20%;
     }
-    color: $white;
+    color: $sliding-menu-color;
+    font-family: $heading-font;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
     @include font-size(14);
     @include media($small) {
       @include font-size(16);
@@ -98,8 +101,8 @@
       @include media($small) {
         @include font-size(48,no,1);
       }
-      font-family: $base-font;
-      text-transform: uppercase;
+      font-family: $heading-font;
+      font-variant: small-caps;
       font-weight: 400;
     }
   }
@@ -125,15 +128,18 @@
   .menu-item {
     a {
       display: block;
-      color: $white;
+      color: $sliding-menu-color;
       text-decoration: none;
+      &:hover {
+        color: $sliding-menu-color-hover;
+      }
     }
     .teaser {
       position: absolute;
       left: 0;
       margin-bottom: 0;
       width: 50px;
-      border: 2px solid $white;
+      border: 2px solid rgba(#e8e0d0, 0.4);
       margin-bottom: ($gutter / 2);
       opacity: 0.6;
       @include media($small) {
@@ -146,9 +152,11 @@
     .title {
       display: block;
       margin-left: 60px;
-      font-family: $alt-font;
+      font-family: $heading-font;
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
       @include font-size(24,no);
-      font-weight: 700;
+      font-weight: 400;
       @include media($small) {
         margin-left: 170px;
         @include font-size(32,no);
@@ -166,7 +174,7 @@
   }
   .sub-menu-item > li a {
     display: block;
-    color: $white;
+    color: $sliding-menu-color;
     font-style: italic;
   }
   .menu-item .home a {
