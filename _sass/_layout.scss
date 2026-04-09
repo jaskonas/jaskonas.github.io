@@ -416,15 +416,20 @@ pre.ascii-art {
 	@include outer-container;
 	margin-top: (3 * (0px + $doc-line-height));
 	margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
+	padding-top: $gutter;
 	padding-bottom: $gutter;
+	border-top: 1px solid $border-color;
 	font-family: $alt-font;
   /* Copyright text */
 	.copyright {
 		@include font-size(12);
-		color: lighten($black,60);
+		font-variant: small-caps;
+		letter-spacing: 0.06em;
+		color: lighten($text-color, 45);
 		a {
-			color: lighten($black,60);
+			color: lighten($text-color, 45);
 			text-decoration: none;
+			&:hover { color: $link-color; }
 		}
 	}
 }
