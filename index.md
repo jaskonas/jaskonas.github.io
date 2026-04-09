@@ -75,15 +75,18 @@ title: ""
 })();
 </script>
 
-I am a [Fellow at the Center for the Study of Statesmanship at the Catholic University of America](https://css.cua.edu/team-members/jonathan-askonas/) and a member of the [Politics faculty](http://politics.catholic.edu). I was previously a Predoctoral Research Fellow at the [Clements Center for National Security](http://www.clementscenter.org) at the University of Texas at Austin.
+I am a Member of the [Policy Planning Staff](https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/policy-planning-staff/) at the U.S. Department of State, an Assistant Professor of Politics and Fellow at the [Center for the Study of Statesmanship](https://css.cua.edu/team-members/jonathan-askonas/) at the Catholic University of America, and a Senior Fellow at the [Foundation for American Innovation](https://www.thefai.org/). I co-host [The Dynamist](https://www.thefai.org/the-dynamist), a podcast on technology, politics, and society.
+
+My research focuses on military adaptation and organizational learning, the political economy of technology, and American grand strategy. I am completing two books: *A Muse of Fire: Why the U.S. Military Forgets What It Learns in War* (manuscript completed) and *The Shot in the Dark: A History of the U.S. Army Asymmetric Warfare Group, 2006–2021* (under contract with the U.S. Army).
+
+I hold a DPhil in Politics from the University of Oxford and a B.S.F.S. *summa cum laude* from Georgetown University's School of Foreign Service.
 
 I am grateful for the generous support of the following organizations:
 
++ [The John Templeton Foundation](https://www.templeton.org/)
 + [The Smith Richardson Foundation](https://www.srf.org/)
++ [The Clements Center for National Security](http://www.clementscenter.org)
++ [The Mercatus Center](https://www.mercatus.org/)
 + [The Cyril Foster Fund](http://www.politics.ox.ac.uk)
-+ [The Charles Koch Foundation](https://www.charleskochfoundation.org/)
-+ [The Tobin Project](https://www.tobinproject.org/)
-+ [The Ridgway Family Endowment](https://ahec.armywarcollege.edu/ridgway.cfm)
 + [The Beinecke Scholarship](http://fdnweb.org/beinecke/)
 + [Georgetown University](http://www.georgetown.edu)
-+ [The Mercatus Center](https://www.mercatus.org/)
