@@ -7,13 +7,13 @@
    ========================================================================== */
 
 $base-font                   	: Georgia,Times,"Times New Roman",serif;
-$heading-font                	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+$heading-font                	: "Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
 $caption-font                	: $base-font;
 $code-font                   	: monospace;
-$alt-font                    	: $heading-font;
+$alt-font                    	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
 
-$doc-font-size               	: 16;
-$doc-line-height             	: 24;
+$doc-font-size               	: 17;
+$doc-line-height             	: 28;
 
 $border-radius               	: 3px;
 
@@ -24,7 +24,7 @@ $border-radius               	: 3px;
 $white                        : #fff;
 $black                        : #000;
 
-$body-color                  	: #ebebeb;
+$body-color                  	: #f9f8f6;
 
 $text-color                  	: #313130;
 $caption-color                : mix($white, $text-color, 25%);

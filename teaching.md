@@ -1,10 +1,14 @@
 ---
 layout: archive
 permalink: /teaching/
-title: ""
+title: "Teaching"
 image:
     feature:
 ---
+
+I teach courses in comparative politics, American foreign policy, and international relations at the Catholic University of America.
+
+<pre class="ascii-art">  ─────── * ───────</pre>
 
 ## POL112: Introduction to Comparative Politics
 

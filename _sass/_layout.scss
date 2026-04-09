@@ -1,3 +1,33 @@
+/*
+   ASCII art elements
+   ========================================================================== */
+
+.ascii-logo {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: pre;
+	font-family: $code-font;
+	font-size: 8px;
+	line-height: 1.25;
+	color: lighten($black, 65);
+	margin: 0;
+	margin-right: 0.6em;
+	padding: 0;
+}
+
+pre.ascii-art {
+	font-family: $code-font;
+	font-size: 12px;
+	line-height: 1.4;
+	color: lighten($text-color, 40);
+	background: transparent;
+	border: none;
+	overflow: visible;
+	margin: (0px + $doc-line-height) auto;
+	padding: 0;
+	text-align: center;
+}
+
 /* ==========================================================================
    Page layout
    ========================================================================== */
@@ -145,7 +175,7 @@
 #main {
 	.inner-wrap {
 		@include media($medium) {
-			@include span-columns(9);
+			@include span-columns(11);
 		}
 	}
 	.page-title {
