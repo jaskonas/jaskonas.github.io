@@ -56,12 +56,25 @@ ins {
 	border-bottom: 1px solid $text-color;
 }
 
+/* Drop cap on lead paragraph */
+
+.page-content > p:first-of-type::first-letter {
+	font-family: $heading-font;
+	font-size: 4.2em;
+	font-weight: 300;
+	line-height: 0.78;
+	float: left;
+	margin-right: 0.08em;
+	margin-top: 0.06em;
+	color: $text-color;
+}
+
 /* Links */
 
 a {
 	color: $link-color;
 	&:hover {
-		color: darken($link-color, 20);
+		color: darken($link-color, 10);
 	}
 	&:focus {
 		@extend %tab-focus;

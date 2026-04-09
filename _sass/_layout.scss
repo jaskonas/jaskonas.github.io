@@ -7,12 +7,13 @@
 	vertical-align: middle;
 	white-space: pre;
 	font-family: $code-font;
-	font-size: 8px;
+	font-size: 9px;
 	line-height: 1.25;
-	color: lighten($black, 65);
+	color: $link-color;
 	margin: 0;
-	margin-right: 0.6em;
+	margin-right: 0.7em;
 	padding: 0;
+	opacity: 0.75;
 }
 
 pre.ascii-art {
@@ -39,6 +40,8 @@ pre.ascii-art {
 #masthead {
 	padding: $gutter;
 	z-index: 5;
+	border-top: 3px double $text-color;
+	border-bottom: 1px solid $text-color;
 	@include transform(translate(0,0));
 	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
 	&.slide {
@@ -53,15 +56,16 @@ pre.ascii-art {
 	@include media($large) {
 		@include span-columns(4);
 	}
-	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+	padding: (.25 * $masthead-height) 0;
 	height: $masthead-height;
 	text-decoration: none;
-	color: $black;
-	font-family: $alt-font;
-	font-weight: 700;
-	@include font-size(20,no);
-	line-height: .5 * $masthead-height; // half the height to center vertically
-	text-transform: uppercase;
+	color: $text-color;
+	font-family: $heading-font;
+	font-weight: 400;
+	font-variant: small-caps;
+	@include font-size(22,no);
+	letter-spacing: 0.1em;
+	line-height: .5 * $masthead-height;
 }
 
 
@@ -132,11 +136,16 @@ pre.ascii-art {
 	}
 	li {
 		a {
-			font-weight: 700;
-			@include font-size(16,no);
-			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $black;
-			text-transform: uppercase;
+			font-weight: 400;
+			font-family: $heading-font;
+			font-variant: small-caps;
+			letter-spacing: 0.08em;
+			@include font-size(17,no);
+			line-height: .5 * $masthead-height;
+			color: $text-color;
+			&:after {
+				background: $link-color;
+			}
 		}
 	}
 }
@@ -194,9 +203,10 @@ pre.ascii-art {
 			a { text-decoration: none; }
 			p a,
 			li a {
-				border-bottom: 1px dotted lighten($link-color, 50);
+				border-bottom: 1px dotted lighten($link-color, 35);
 				&:hover {
 					border-bottom-style: solid;
+					border-bottom-color: $link-color;
 				}
 			}
 			p > a.reversefootnote {

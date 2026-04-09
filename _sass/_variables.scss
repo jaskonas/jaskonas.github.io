@@ -7,10 +7,10 @@
    ========================================================================== */
 
 $base-font                   	: Georgia,Times,"Times New Roman",serif;
-$heading-font                	: "Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+$heading-font                	: "Cormorant Garamond","Palatino Linotype",Palatino,Georgia,serif;
 $caption-font                	: $base-font;
 $code-font                   	: monospace;
-$alt-font                    	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+$alt-font                    	: "Cormorant Garamond","Palatino Linotype",Palatino,Georgia,serif;
 
 $doc-font-size               	: 17;
 $doc-line-height             	: 28;
@@ -24,15 +24,15 @@ $border-radius               	: 3px;
 $white                        : #fff;
 $black                        : #000;
 
-$body-color                  	: #f9f8f6;
+$body-color                  	: #faf7f0;
 
-$text-color                  	: #313130;
-$caption-color                : mix($white, $text-color, 25%);
+$text-color                  	: #1c1a16;
+$caption-color                : mix($white, $text-color, 35%);
 
-$base-color                  	: #343434;
+$base-color                  	: #1c1a16;
 $comp-color                  	: complement($base-color);
-$border-color                	: #ddd;
-$link-color                  	: #222;
+$border-color                	: #ccc9c0;
+$link-color                  	: #5c2218;
 
 $primary-color               	: $black;
 $success-color               	: #2ecc71;
