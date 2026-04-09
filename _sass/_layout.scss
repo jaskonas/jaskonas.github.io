@@ -16,6 +16,45 @@
 	opacity: 0.75;
 }
 
+/* MIRV ASCII art block */
+
+#mirv-wrap {
+	background: #070604;
+	margin: (2 * (0px + $doc-line-height)) (-1 * $gutter);
+	padding: $gutter;
+	overflow-x: auto;
+	cursor: crosshair;
+}
+
+#mirv {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 9px;
+	line-height: 1.18;
+	color: #a88b42;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	display: block;
+	@include transition(color 0.4s);
+}
+
+#mirv-wrap:hover #mirv {
+	color: #d4b468;
+}
+
+.mirv-caption {
+	display: block;
+	font-family: $alt-font;
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #a88b42;
+	text-align: right;
+	margin-top: 4px;
+	opacity: 0.6;
+}
+
 pre.ascii-art {
 	font-family: $code-font;
 	font-size: 12px;
