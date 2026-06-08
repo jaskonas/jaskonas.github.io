@@ -1,1 +1,54 @@
-// signal-list (filled in later task)
+.arrow-list { list-style: none; margin: 0; padding: 0; }
+.arrow-list > li { border-bottom: 1px solid var(--line); }
+.arrow-list > li:last-child { border-bottom: 0; }
+
+.arrow-list > li > a {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  align-items: baseline;
+  column-gap: 0.4rem;
+  padding: 0.95rem 0.5rem;
+  color: var(--ink);
+  border-left: 2px solid transparent;
+}
+.arrow-list > li > a:hover { text-decoration: none; }
+
+.arrow-list .caret {
+  font-family: var(--mono);
+  color: var(--gold);
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+.arrow-list .al-main { font-size: 1.05rem; }
+.arrow-list .al-meta {
+  grid-column: 2;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--mut);
+  margin-top: 0.1rem;
+}
+
+// dated variant: year as a scannable left gutter (Writing, Publications).
+.arrow-list--dated > li > a { grid-template-columns: 1.4rem 3.4rem 1fr; }
+.arrow-list--dated .al-year {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--mut);
+}
+.arrow-list--dated .al-body { display: block; }
+.arrow-list--dated > li.is-active .al-year { color: var(--gold); }
+
+// active (keyboard/hover) state
+.arrow-list > li.is-active > a { background: var(--panel); border-left-color: var(--gold); }
+.arrow-list > li.is-active .caret { opacity: 1; transform: translateX(0); }
+.arrow-list > li.is-active .al-main { color: var(--gold); }
+.arrow-list > li.is-active .al-meta { color: var(--dim); }
+
+// keyboard focus parity (no-JS / tabbing)
+.arrow-list > li > a:focus-visible { outline: none; background: var(--panel); border-left-color: var(--gold); }
+.arrow-list > li > a:focus-visible .caret { opacity: 1; transform: translateX(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow-list .caret { transition: none; }
+}
