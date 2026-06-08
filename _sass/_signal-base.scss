@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.12; color: #f4f1ea; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.12; color: var(--ink-hi); }
 h1 { font-size: 2.6rem; letter-spacing: -0.01em; margin: 0 0 1rem; }
 h2 { font-size: 1.9rem; margin: 2.4rem 0 0.8rem; }
 h3 { font-size: 1.4rem; margin: 1.8rem 0 0.5rem; }
