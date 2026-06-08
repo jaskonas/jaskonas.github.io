@@ -8,3 +8,4 @@ gem "jekyll-feed"
 gem "jekyll-extlinks"
 gem 'github-pages', group: :jekyll_plugins
 gem 'nokogiri'
+gem 'webrick' # required for `jekyll serve` on Ruby 3+
