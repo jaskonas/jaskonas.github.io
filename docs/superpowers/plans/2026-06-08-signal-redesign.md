@@ -365,7 +365,9 @@ git commit -m "Signal theme: footer"
 
 The signature interaction. Any `<ul class="arrow-list">` becomes keyboard-selectable; it degrades to plain links without JS.
 
-**Markup contract** (used by all later list pages):
+**Markup contract** (used by all later list pages). Two shapes:
+
+Plain (homepage menu, Speaking) — `[caret] [main / meta]`:
 ```html
 <ul class="arrow-list">
   <li>
@@ -373,6 +375,22 @@ The signature interaction. Any `<ul class="arrow-list">` becomes keyboard-select
       <span class="caret" aria-hidden="true">❯</span>
       <span class="al-main">Primary text</span>
       <span class="al-meta">Secondary text</span>
+    </a>
+  </li>
+</ul>
+```
+
+Dated (Writing, Publications) — `[caret] [year] [main+meta]`, year as a scannable gutter:
+```html
+<ul class="arrow-list arrow-list--dated">
+  <li>
+    <a href="URL">
+      <span class="caret" aria-hidden="true">❯</span>
+      <span class="al-year">2025</span>
+      <span class="al-body">
+        <span class="al-main">Primary text</span>
+        <span class="al-meta">Secondary text (no year — it's in the gutter)</span>
+      </span>
     </a>
   </li>
 </ul>
@@ -416,6 +434,19 @@ The signature interaction. Any `<ul class="arrow-list">` becomes keyboard-select
   color: var(--mut);
   margin-top: 0.1rem;
 }
+
+// dated variant: year as a scannable left gutter (Writing, Publications).
+// Turns a flat list into a comparative time display (Tufte: range-frame /
+// "compared to what?"). Year sits in its own mono column; title+meta stack
+// in .al-body (a normal block, so the base .al-meta grid rule is inert here).
+.arrow-list--dated > li > a { grid-template-columns: 1.4rem 3.4rem 1fr; }
+.arrow-list--dated .al-year {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--mut);
+}
+.arrow-list--dated .al-body { display: block; }
+.arrow-list--dated > li.is-active .al-year { color: var(--gold); }
 
 // active (keyboard/hover) state
 .arrow-list > li.is-active > a { background: var(--panel); border-left-color: var(--gold); }
@@ -572,7 +603,7 @@ layout: default
   </section>
 
   <section class="home-menu container" aria-label="Site sections">
-    <p class="label menu-label">— where to go —</p>
+    <p class="label menu-label">Sections</p>
     <ul class="arrow-list">
       {% for link in site.data.menu %}
       <li>
@@ -699,10 +730,6 @@ layout: default
 .page-body { max-width: var(--measure); }
 .page-body h2 { font-size: 1.5rem; }
 
-// year grouping for lists
-.list-group { margin: 2.2rem 0; }
-.list-group > .label { display: block; margin: 0 0 0.4rem 0.5rem; }
-
 // book projects
 .book { margin: 0 0 3.5rem; }
 .book-img {
@@ -815,13 +842,16 @@ lead: "Selected essays and op-eds on technology, war, and the American future."
 excerpt: "Selected essays and op-eds by Jon Askonas."
 ---
 
-<ul class="arrow-list">
+<ul class="arrow-list arrow-list--dated">
 {% for item in site.data.writing %}
   <li>
     <a href="{{ item.url }}" target="_blank" rel="noopener">
       <span class="caret" aria-hidden="true">❯</span>
-      <span class="al-main"><span class="entry-title">{{ item.title }}</span></span>
-      <span class="al-meta">{{ item.outlet }} · {{ item.year }}{% if item.coauthor %} · {{ item.coauthor }}{% endif %}{% if item.note %} · {{ item.note }}{% endif %}</span>
+      <span class="al-year">{{ item.year }}</span>
+      <span class="al-body">
+        <span class="al-main"><span class="entry-title">{{ item.title }}</span></span>
+        <span class="al-meta">{{ item.outlet }}{% if item.coauthor %} · {{ item.coauthor }}{% endif %}{% if item.note %} · {{ item.note }}{% endif %}</span>
+      </span>
     </a>
   </li>
 {% endfor %}
@@ -920,13 +950,16 @@ See [Book Projects](/books/) for *A Muse of Fire* and *The Shot in the Dark*.
 
 ## Articles & Chapters
 
-<ul class="arrow-list">
+<ul class="arrow-list arrow-list--dated">
 {% for item in site.data.publications %}
   <li>
     {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{% else %}<a href="#" aria-disabled="true">{% endif %}
       <span class="caret" aria-hidden="true">❯</span>
-      <span class="al-main"><span class="entry-title">{{ item.title }}</span></span>
-      <span class="al-meta">{{ item.venue }}{% if item.coauthor %} · {{ item.coauthor }}{% endif %} · {{ item.year }}</span>
+      <span class="al-year">{{ item.year }}</span>
+      <span class="al-body">
+        <span class="al-main"><span class="entry-title">{{ item.title }}</span></span>
+        <span class="al-meta">{{ item.venue }}{% if item.coauthor %} · {{ item.coauthor }}{% endif %}</span>
+      </span>
     </a>
   </li>
 {% endfor %}
