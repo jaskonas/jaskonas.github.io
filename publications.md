@@ -16,7 +16,7 @@ See [Book Projects](/books/) for *A Muse of Fire* and *The Shot in the Dark*.
 <ul class="arrow-list arrow-list--dated">
 {% for item in site.data.publications %}
   <li>
-    {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{% else %}<a href="#" aria-disabled="true">{% endif %}
+    {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{% else %}<a aria-disabled="true">{% endif %}
       <span class="caret" aria-hidden="true">❯</span>
       <span class="al-year">{{ item.year }}</span>
       <span class="al-body">
