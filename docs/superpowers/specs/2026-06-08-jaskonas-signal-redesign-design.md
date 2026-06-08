@@ -63,9 +63,9 @@ Top navigation (mono, lowercase):
 
 | Page | Route | Purpose | Source content |
 |---|---|---|---|
-| **Home** | `/` | Hero bio + arrow-nav menu + a compact "Recent Writing" strip (3–4 latest essays) | Drafted from CV positions |
-| **Writing** | `/writing/` | Curated essays & op-eds, reverse-chronological, grouped by year, each linking out | CV "Other Writing" (27 items) |
-| **Books** | `/books/` | The two books in preparation, with description & status | CV "Book Manuscripts in Preparation" |
+| **Home** | `/` | Hero bio + arrow-nav menu (maximally spare — no essay strip) | Drafted from CV positions |
+| **Writing** | `/writing/` | A **curated subset** of the strongest essays & op-eds, grouped by year, each linking out | Selected from CV "Other Writing" |
+| **Book Projects** | `/books/` | The two book projects, each with a header image, title, and description | CV "Book Manuscripts in Preparation" |
 | **Speaking** | `/speaking/` | Talks/presentations + conferences organized | CV "Presentations" (13) + "Conferences Organized" (7) |
 | **The Machine Has No Tradition** | `/seminar/` | The summer seminar (own page) | CV "Conferences Organized" entry |
 | **Publications** | `/publications/` | Academic peer-reviewed articles & chapters | CV "Peer-Reviewed Articles & Chapters" (10) |
@@ -73,11 +73,24 @@ Top navigation (mono, lowercase):
 
 **Dropped** as standalone pages: Teaching, Data, Student Dashboard. **Removed:** the MIRV ASCII hero, the podcast.
 
-### Homepage composition
+### Homepage composition (maximally spare)
 1. Brand (mono `JON ASKONAS`) + top nav.
 2. Hero: mono kicker (`// technology · war · the american future`), Newsreader headline, one-paragraph bio.
 3. Arrow-nav menu (the IA above as a selectable list with one-line descriptors).
-4. Compact "Recent Writing" — 3–4 most recent essays, each a link with outlet + year. *(Open item 5.3 — keep or cut.)*
+
+No recent-essay strip — the homepage stays clean: identity, then the menu, then footer.
+
+### Book Projects page (`/books/`)
+Framed as **book projects** (not "books in preparation"). Each project is a block with:
+1. A **header / hero image** (full-width within the content measure).
+2. A **title** (Newsreader display) — italicized book title + subtitle.
+3. A **description paragraph** (status woven in, not a separate label).
+
+Two projects:
+- ***A Muse of Fire: Why the U.S. Military Forgets What It Learns in War.***
+- ***The Shot in the Dark: A History of the U.S. Army Asymmetric Warfare Group, 2006–2021.***
+
+Images are an open item (§7.5) — Jon provides, or we scaffold tasteful placeholders (e.g. a duotone-on-slate treatment) until he does.
 
 ### Bio (draft, to be edited by Jon)
 > Jon Askonas writes about technology, war, and the American future — how nations and institutions learn, forget, and remake themselves under technological pressure, and what statecraft requires in an age of disruption. He is a member of the Policy Planning Staff at the U.S. Department of State, an Assistant Professor of Politics at the Catholic University of America, and a Senior Fellow at the Foundation for American Innovation. He is completing two books on the U.S. military's struggle to remember what it learns in war.
@@ -119,10 +132,10 @@ The existing post/article machinery is **not** central to the new IA. The Writin
 ## 7. Open Items (need Jon's content/decisions)
 
 1. **Bio wording** (§4) — Jon edits the draft.
-2. **Books** — confirm titles/status are current (matches CV: *A Muse of Fire*, manuscript complete; *The Shot in the Dark*, under Army contract).
-3. **Homepage "Recent Writing" strip** — keep (hero + menu + 3–4 essays) or go maximally spare (hero + menu only)? Default: keep.
-4. **Writing curation** — show all 27 "Other Writing" items, or a curated subset of the strongest? Default: show all, grouped by year.
-5. **CV PDF** — Jon provides the public CV file to host at `/about/`.
+2. **Book projects** — confirm titles/status (CV: *A Muse of Fire*, manuscript complete; *The Shot in the Dark*, under Army contract).
+3. **Writing curation** — implementation will propose a curated shortlist (~10–12 of the strongest, e.g. the New Atlantis pieces, *Technology for the American Family*, the WSJ SpaceX op-ed, *Technological Stagnation Is a Choice*, *Why Conservatism Failed*, the Foreign Policy pieces); Jon confirms/trims the final list.
+4. **CV PDF** — Jon provides the public CV file to host at `/about/`.
+5. **Book project header images** — Jon provides images, or we scaffold duotone-on-slate placeholders until he does.
 
 ## 8. Out of Scope (YAGNI)
 
