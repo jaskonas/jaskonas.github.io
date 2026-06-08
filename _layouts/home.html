@@ -2,27 +2,27 @@
 layout: default
 ---
 
-<div id="main" role="main">
-	<div class="wrap">
-		{% if page.image.feature %}
-    <div class="page-lead" style="background-image:url({{ site.url }}/images/{{ page.image.feature }})">
-      <div class="wrap page-lead-content">
-        <h1>{{ page.title }}</h1>
-        {% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}
-      </div><!-- /.page-lead-content -->
-    </div><!-- /.page-lead -->
-    {% endif %}
-		{% if page.title != "" %}
-		<div class="page-title">
-			<h1>{{ page.title }}</h1>
-			{% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}
-		</div>
-		{% endif %}
-		<div class="archive-wrap">
-			<div class="page-content">
-				{{ content | extlinks }}
-			</div><!-- /.page-content -->
-		</div class="archive-wrap"><!-- /.archive-wrap -->
-	</div><!-- /.wrap -->
-</div><!-- /#main -->
+<main id="main" role="main">
+  <section class="hero container">
+    <p class="kicker">// technology · war · the american future</p>
+    <h1 class="hero-head">How nations learn, forget, and <em>remake themselves</em> under technological pressure.</h1>
+    <div class="hero-bio">
+      {{ content }}
+    </div>
+  </section>
 
+  <section class="home-menu container" aria-label="Site sections">
+    <p class="label menu-label">Sections</p>
+    <ul class="arrow-list">
+      {% for link in site.data.menu %}
+      <li>
+        <a href="{{ site.url }}{{ link.url }}">
+          <span class="caret" aria-hidden="true">❯</span>
+          <span class="al-main">{{ link.title }}</span>
+          <span class="al-meta">{{ link.desc }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>

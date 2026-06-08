@@ -1,0 +1,19 @@
+# Homepage destination menu
+- title: Writing
+  url: /writing/
+  desc: Essays & op-eds
+- title: Book Projects
+  url: /books/
+  desc: Two books in progress
+- title: Speaking
+  url: /speaking/
+  desc: Talks & interviews
+- title: The Machine Has No Tradition
+  url: /seminar/
+  desc: Summer seminar on the philosophy of technology
+- title: Publications
+  url: /publications/
+  desc: Peer-reviewed work
+- title: About
+  url: /about/
+  desc: Bio & CV
