@@ -2,7 +2,7 @@
   <div class="container masthead-inner">
     <a href="{{ site.url }}/" class="brand">JON ASKONAS</a>
     <nav class="top-nav" role="navigation" aria-label="Primary">
-      {% for link in site.data.navigation %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endfor %}
+      {% for link in site.data.navigation %}<a href="{{ site.url }}{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
     </nav>
   </div>
 </header>
