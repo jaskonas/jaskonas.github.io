@@ -1,27 +1,13 @@
-# Site navigation links
-
-- title: Research
-  url: /research
-  excerpt: "Research Projects"
-  image:
-
-- title: Papers
-  url: /data
-  excerpt: "Working papers and pre-prints"
-  image:
-
-- title: Current Students
-  url: /studentdashboard
-  excerpt: "Dashboard for Current Students"
-  image:
-
-- title: Teaching
-  url: /teaching
-  excerpt: "Information about my Teaching"
-  image:
-
-
-- title: CV
-  url: /jaskonaspublic_cv.pdf
-  excerpt: "Link to my CV"
-  image:
+# Top navigation (Signal IA)
+- title: Writing
+  url: /writing/
+- title: Books
+  url: /books/
+- title: Speaking
+  url: /speaking/
+- title: The Seminar
+  url: /seminar/
+- title: Publications
+  url: /publications/
+- title: About
+  url: /about/
