@@ -1,0 +1,37 @@
+conferences:
+  - title: Generative AI and National Security
+    role: Organizer
+    detail: Day-long conference with speakers from DoD and CDAO; keynote by Michael Kratsios
+    year: 2024
+  - title: Virtue in the Loop — Military AI Ethics
+    role: Co-Organizer (with Paul Scherz)
+    detail: Developing a virtue-ethics framework for autonomous systems in military contexts
+    year: 2022
+  - title: American Democracy in the Internet Age
+    role: Organizer
+    detail: Seminar for the Templeton World Foundation and public conference with The New Atlantis
+    year: 2019
+  - title: Peaceful Coexistence? Russian Grand Strategy beyond Putin
+    role: Organizer
+    detail: Interdisciplinary colloquium on Russian visions of world order
+    year: 2018
+
+talks:
+  - title: Morality in Tech
+    venue: Invitation-Only Seminar, Princeton University
+    year: 2023
+  - title: AI and the Problem of Military Judgment
+    venue: Virtue in the Loop Conference, Catholic University of America
+    year: 2022
+  - title: "Money Is Not a Weapons System: Inflation, Economic Distortion, and Counterinsurgency Failure"
+    venue: Political Economy of Security Workshop, Boston University
+    year: 2020
+  - title: "The Owl of Minerva Flies at Dusk: The Organizational Sources of Military Optimism"
+    venue: APSA Annual Conference, Washington, DC
+    year: 2019
+  - title: Finding the Common Good in the Age of the Infinite Self
+    venue: Citizenship in a Networked Age Conference (Templeton World Foundation)
+    year: 2019
+  - title: How Tech Utopia Fostered Tyranny
+    venue: Hertog Free Speech and the Internet Seminar, Washington, DC
+    year: 2019
