@@ -37,6 +37,7 @@
   color: var(--mut);
 }
 .arrow-list--dated .al-body { display: block; }
+.arrow-list--dated .al-meta { grid-column: 3; }
 .arrow-list--dated > li.is-active .al-year { color: var(--gold); }
 
 // active (keyboard/hover) state
