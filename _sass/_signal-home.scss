@@ -9,6 +9,7 @@
 }
 .hero-head em { color: var(--gold); }
 .hero-bio { color: var(--dim); font-size: 1.12rem; max-width: var(--measure); }
+// 40% gold — derived from --gold (#f5b942); CSS can't apply alpha to a hex custom property directly
 .hero-bio a { border-bottom: 1px solid rgba(245, 185, 66, 0.4); }
 .hero-bio a:hover { text-decoration: none; border-bottom-color: var(--gold); }
 

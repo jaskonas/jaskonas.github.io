@@ -11,12 +11,12 @@ layout: default
     </div>
   </section>
 
-  <section class="home-menu container" aria-label="Site sections">
-    <p class="label menu-label">Sections</p>
+  <section class="home-menu container" aria-labelledby="menu-heading">
+    <p class="label menu-label" id="menu-heading">Sections</p>
     <ul class="arrow-list">
       {% for link in site.data.menu %}
       <li>
-        <a href="{{ site.url }}{{ link.url }}">
+        <a href="{{ link.url | relative_url }}">
           <span class="caret" aria-hidden="true">❯</span>
           <span class="al-main">{{ link.title }}</span>
           <span class="al-meta">{{ link.desc }}</span>

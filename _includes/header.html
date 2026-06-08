@@ -1,8 +1,8 @@
 <header id="masthead">
   <div class="container masthead-inner">
-    <a href="{{ site.url }}/" class="brand">JON ASKONAS</a>
+    <a href="{{ '/' | relative_url }}" class="brand">JON ASKONAS</a>
     <nav class="top-nav" role="navigation" aria-label="Primary">
-      {% for link in site.data.navigation %}<a href="{{ site.url }}{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
+      {% for link in site.data.navigation %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
     </nav>
   </div>
 </header>
