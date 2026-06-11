@@ -1,56 +1,69 @@
 # Curated essays & op-eds (strongest, policy-facing). Newest first.
+# NOTE: `abstract` fields are AI-drafted placeholders pending Jon's review.
 - title: The New Control Society
   outlet: The New Atlantis
   year: 2025
   url: https://www.thenewatlantis.com/publications/the-new-control-society
+  abstract: "How ambient computation and predictive infrastructure are quietly swapping discipline for control — and what that does to the meaning of freedom."
 - title: Technology for the American Family
   outlet: National Affairs
   year: 2025
   coauthor: with Michael Toscano
   url: https://www.nationalaffairs.com/publications/detail/technology-for-the-american-family
+  abstract: "A policy agenda for bending technology toward family life instead of letting it dissolve the household."
 - title: How to Free Elon Musk's SpaceX From Federal Red Tape
   outlet: Wall Street Journal
   year: 2024
   coauthor: with Jonathan Berry
   url: https://www.wsj.com/opinion/how-to-free-elon-musks-spacex-from-federal-red-tape-nepa-faa-3b4e9dbd
+  abstract: "Why NEPA reviews and FAA permitting throttle American spaceflight — and a concrete path to unblock it."
 - title: Technological Stagnation Is a Choice
   outlet: American Affairs
   year: 2023
   url: https://americanaffairsjournal.org/2023/11/technological-stagnation-is-a-choice/
+  abstract: "The Great Stagnation is not fate but the product of institutions that quietly stopped trying to build."
 - title: Common Sense on AI
   outlet: American Affairs
   year: 2023
   coauthor: with Samuel Hammond
   url: https://americanaffairsjournal.org/2023/05/common-sense-on-ai/
+  abstract: "A pragmatic middle path between AI doom and AI denial, written for the people who actually have to make policy."
 - title: How Gamers Eclipsed Spies as an Intelligence Threat
   outlet: Foreign Policy
   year: 2023
   coauthor: with Renée DiResta
   url: https://foreignpolicy.com/2023/04/15/ukraine-leak-intelligence-discord-espionage-gamers-internet-online/
+  abstract: "War-game forums and Discord leaks now spill classified secrets faster than any foreign intelligence service."
 - title: "Reality: A Post-Mortem"
   outlet: The New Atlantis
   year: 2022
   note: eight-part media-ecology series
   url: https://www.thenewatlantis.com/collections/reality-a-post-mortem
+  abstract: "An eight-part inquiry into how the modern media ecology dissolved any shared sense of the real."
 - title: Why Conservatism Failed
   outlet: Compact
   year: 2022
   url: https://compactmag.com/article/why-conservatism-failed
+  abstract: "Conservatism lost because it set out to conserve markets, and markets dissolved the very things — family, place, tradition — it meant to protect."
 - title: You Are Already in the Metaverse
   outlet: UnHerd
   year: 2022
   url: https://unherd.com/2022/09/you-are-already-in-the-metaverse/
+  abstract: "The metaverse isn't a coming destination; media has already replaced the shared world with a more compelling, more profitable copy."
 - title: With Finland and Sweden in NATO, the U.S. Can Finally Pivot to the Pacific
   outlet: Foreign Policy
   year: 2022
   coauthor: with Gil Barndollar
   url: https://foreignpolicy.com/2022/07/12/finland-sweden-nato-us-europe-pacific-military-pivot-strategy-geopolitics/
+  abstract: "Nordic accession lets Washington hand European security to Europe and pivot in earnest toward the Pacific."
 - title: Why Speech Platforms Can Never Escape Politics
   outlet: National Affairs
   year: 2020
   coauthor: with Ari Schulman
   url: https://www.nationalaffairs.com/why-speech-platforms-can-never-escape-politics
+  abstract: "Content moderation is inescapably political, because governing speech is itself an act of governance — there is no neutral ground."
 - title: How Tech Utopia Fostered Tyranny
   outlet: The New Atlantis
   year: 2019
   url: https://www.thenewatlantis.com/publications/how-tech-utopia-fostered-tyranny
+  abstract: "Silicon Valley's faith in frictionless connection built, almost by accident, the architecture of a new soft tyranny."

@@ -1,4 +1,7 @@
-/* Signal arrow navigation — progressive enhancement over real <a> links. */
+/* Signal arrow navigation — progressive enhancement over real <a> links.
+   Optionally drives a Tufte-style margin note: a list with
+   data-margin="<id>" updates that element with the active row's
+   data-title / data-meta / data-abstract, aligned opposite the row. */
 (function () {
   "use strict";
 
@@ -30,6 +33,34 @@
     }
   }
 
+  // ---- margin note ----
+  function placeNote(list) {
+    if (!list._margin || list._shown < 0) return;
+    var li = list._items[list._shown];
+    list._margin.style.top =
+      (li.getBoundingClientRect().top - list.getBoundingClientRect().top) + "px";
+  }
+
+  function showNote(list, idx) {
+    var m = list._margin;
+    if (!m) return;
+    var li = list._items[idx];
+    while (m.firstChild) m.removeChild(m.firstChild);
+    function add(cls, text) {
+      if (!text) return;
+      var el = document.createElement("p");
+      el.className = cls;
+      el.textContent = text;
+      m.appendChild(el);
+    }
+    add("note-meta", li.getAttribute("data-meta"));
+    add("note-title", li.getAttribute("data-title"));
+    add("note-abstract", li.getAttribute("data-abstract"));
+    list._shown = idx;
+    m.classList.add("is-shown");
+    placeNote(list);
+  }
+
   function setup(list) {
     var items = Array.prototype.slice.call(list.children).filter(function (el) {
       return el.tagName === "LI";
@@ -37,6 +68,9 @@
     if (!items.length) return;
     list._items = items;
     list._idx = -1;
+    list._shown = -1;
+    var marginId = list.getAttribute("data-margin");
+    list._margin = marginId ? document.getElementById(marginId) : null;
 
     list._move = function (n, scroll) {
       if (n < 0) n = items.length - 1;
@@ -46,6 +80,7 @@
         else items[i].classList.remove("is-active");
       }
       list._idx = n;
+      if (list._margin) showNote(list, n);
       if (scroll && items[n]) items[n].scrollIntoView({ block: "nearest" });
     };
 
@@ -57,9 +92,19 @@
         a.addEventListener("focus", function () { activate(list, i, false); });
       }
     });
+
+    // Default state: preview the most-recent item's abstract in the margin,
+    // without engaging keyboard nav or highlighting a row.
+    if (list._margin && items.length) showNote(list, 0);
   }
 
   lists.forEach(setup);
+
+  function repositionAll() {
+    lists.forEach(function (list) { if (list._margin) placeNote(list); });
+  }
+  window.addEventListener("load", repositionAll);
+  window.addEventListener("resize", repositionAll);
 
   document.addEventListener("keydown", function (e) {
     if (!activeList || !activeList._items) return;

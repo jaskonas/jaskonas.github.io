@@ -26,3 +26,69 @@
 // publications / speaking entries (non-link rich text inside arrow-list main)
 .entry-title { color: var(--ink); }
 .entry-venue { color: var(--dim); font-style: italic; }
+
+// ── Tufte-style margin abstract (Writing) ────────────────────────────────
+// Wide page so the list + right margin both fit.
+.page-body--wide { max-width: 64rem; }
+.writing-layout { position: relative; }
+
+// Inline abstract is the no-JS / mobile fallback; JS hides it and uses the
+// margin note instead (on wide screens) or reveals it under the active row
+// (on narrow screens).
+.inline-abstract {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--dim);
+  margin: 0;
+  padding: 0 0.5rem 0.9rem 5.6rem; // align under the title, past caret + year gutters
+}
+html.js .inline-abstract { display: none; }
+
+// The margin note itself.
+.margin { display: none; }
+.note { opacity: 0; transition: top 0.18s ease, opacity 0.18s ease; }
+.note.is-shown { opacity: 1; }
+.note-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+.note-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ink-hi);
+  margin: 0 0 0.5rem;
+}
+.note-abstract {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--dim);
+  margin: 0;
+}
+
+@media (min-width: 901px) {
+  html.js .writing-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 38rem) 1fr;
+    column-gap: 2.5rem;
+  }
+  html.js .margin { display: block; position: relative; }
+  html.js .note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-left: 1px solid var(--gold);
+    padding-left: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  html.js li.is-active .inline-abstract { display: block; }
+}
