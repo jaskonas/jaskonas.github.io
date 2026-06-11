@@ -63,7 +63,7 @@ html.js .inline-abstract { display: none; }
 @media (min-width: 901px) {
   html.js .writing-layout { display: grid; grid-template-columns: minmax(0, 38rem) 1fr; column-gap: 2.5rem; }
   html.js .margin { display: block; position: relative; }
-  html.js .note { position: absolute; left: 0; right: 0; border-left: 1px solid var(--gilt); padding-left: 1.1rem; }
+  html.js .note { position: absolute; left: 0; right: 0; border-left: 1px solid var(--select); padding-left: 1.1rem; }
 }
 @media (max-width: 900px) {
   html.js li.is-active .inline-abstract { display: block; }
