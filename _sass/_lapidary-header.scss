@@ -2,7 +2,14 @@
 // band is Midnight (= page ground) and structure comes from a gilt hairline,
 // per the dark-mode law (no navy-on-navy). Separation law: nav text on the blue
 // band is parchment/gilt — never red.
-#masthead { background: var(--band); }
+#masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--band);
+  transition: box-shadow .2s ease;
+}
+#masthead.is-scrolled { box-shadow: 0 1px 10px rgba(0,0,0,.22); }
 :root[data-theme="dark"] #masthead { border-bottom: 1px solid var(--rule); }
 
 .masthead-inner {
@@ -12,11 +19,39 @@
   gap: 1rem;
   padding-top: .95rem;
   padding-bottom: .95rem;
+  transition: padding .25s ease;
 }
+#masthead.is-scrolled .masthead-inner { padding-top: .55rem; padding-bottom: .55rem; }
 
 .brand { text-decoration: none; }
 .brand:hover { text-decoration: none; }
-.brand .nameplate { font-size: 1.15rem; }
+
+// Gilt rounded box — present in both expanded and compact states
+.brand-box {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--gilt);
+  border-radius: 50px;
+  padding: .35rem 1.1rem;
+}
+
+.brand-full,
+.brand-mono {
+  font-family: var(--t-title);
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+  color: var(--name);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Expanded: full name visible, monogram hidden
+.brand-full { max-width: 22rem; opacity: 1; transition: max-width .35s ease, opacity .2s ease; }
+.brand-mono { max-width: 0; opacity: 0; transition: max-width .35s ease .15s, opacity .25s ease .15s; }
+
+// Compact (scrolled): name collapses, monogram expands
+#masthead.is-scrolled .brand-full { max-width: 0; opacity: 0; transition: max-width .3s ease, opacity .15s ease; }
+#masthead.is-scrolled .brand-mono { max-width: 3.5rem; opacity: 1; transition: max-width .35s ease .12s, opacity .25s ease .12s; }
 
 .masthead-nav { display: flex; align-items: center; gap: 1.3rem; }
 

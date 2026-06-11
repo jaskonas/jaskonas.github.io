@@ -1,6 +1,11 @@
 <header id="masthead">
   <div class="container masthead-inner">
-    <a href="{{ '/' | relative_url }}" class="brand"><span class="nameplate">Jon Askonas</span></a>
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="Dr. Jonathan D. Askonas — home">
+      <span class="brand-box">
+        <span class="brand-full">Dr. Jonathan D. Askonas</span>
+        <span class="brand-mono" aria-hidden="true">JDA</span>
+      </span>
+    </a>
     <div class="masthead-nav">
       <nav class="top-nav" role="navigation" aria-label="Primary">
         {% for link in site.data.navigation %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
