@@ -24,7 +24,7 @@
   font-size: 0; // hide the literal ❯ from the markup
   color: var(--select);
   opacity: 0;
-  transform: translate(-4px, -50%);
+  transform: translate(-4px, calc(-50% - 2px));
   transition: opacity .12s ease, transform .12s ease;
 }
 .caret::before { content: "\203A"; font-size: 1.1rem; line-height: 1; } // ›
@@ -57,7 +57,7 @@
   outline: none;
 }
 .arrow-list > li.is-active .caret,
-.arrow-list > li > a:focus-visible .caret { opacity: 1; transform: translate(0, -50%); }
+.arrow-list > li > a:focus-visible .caret { opacity: 1; transform: translate(0, calc(-50% - 2px)); }
 .arrow-list > li.is-active .al-main,
 .arrow-list > li.is-active .entry-title,
 .arrow-list > li > a:focus-visible .al-main,
