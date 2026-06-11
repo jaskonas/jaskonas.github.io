@@ -44,8 +44,8 @@
 }
 
 // dated variant — year in a left gutter
-.arrow-list--dated > li > a { grid-template-columns: 3.2rem 1fr; column-gap: .9rem; align-items: baseline; }
-.al-year { font-family: var(--t-body); font-size: .82rem; color: var(--text-muted); }
+.arrow-list--dated > li > a { grid-template-columns: 3.2rem 1fr; column-gap: .9rem; align-items: start; }
+.al-year { font-family: var(--t-body); font-size: .82rem; color: var(--text-muted); align-self: center; }
 .al-body { display: block; }
 .arrow-list--dated .al-meta { grid-column: 2; }
 
