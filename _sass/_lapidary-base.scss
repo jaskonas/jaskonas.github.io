@@ -1,0 +1,64 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--t-body);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background .2s ease, color .2s ease;
+}
+
+// Headline role — Source Serif 4, lowercase allowed, weight 600
+h1, h2, h3, h4 {
+  font-family: var(--t-head);
+  font-weight: 600;
+  line-height: 1.18;
+  color: var(--text-strong);
+  margin: 0 0 .6rem;
+}
+h1 { font-size: 2.4rem; letter-spacing: -.005em; }
+h2 { font-size: 1.95rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin: 0 0 1.05rem; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 2px; }
+
+em { font-style: italic; }
+strong { font-weight: 600; }
+
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+
+hr { border: 0; border-top: 1px solid var(--rule-soft); margin: 2.5rem 0; }
+
+// shared frame
+.container { max-width: var(--frame); margin: 0 auto; padding: 0 var(--pad); }
+
+// ── Titling role: Cinzel, caps only ──
+// Nameplate (large) and eyebrows (small). Per amendment 4, weight inverts:
+// regular at display sizes, bold at label sizes. Always tracked.
+.nameplate {
+  font-family: var(--t-title);
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--name);
+}
+.eyebrow {
+  font-family: var(--t-title);
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+
+// gilt hairline rule (flat — never simulated metal)
+.gilt-rule { border: 0; height: 1px; background: var(--gilt); margin: 1.4rem 0; }

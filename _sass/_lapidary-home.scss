@@ -1,0 +1,26 @@
+.hero { padding: 4rem 0 1.5rem; }
+.hero-eyebrow { display: block; margin-bottom: 1.2rem; }
+.hero-head {
+  font-family: var(--t-head);
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.12;
+  color: var(--text-strong);
+  max-width: 34rem;
+  margin: 0 0 1.4rem;
+}
+// Emphasis runs in oxblood on light grounds (red on white is lawful — the ground
+// sits between red and blue). On Midnight, red can't set text, so it shifts to gilt.
+.hero-head em { font-style: italic; color: var(--red-brand); }
+:root[data-theme="dark"] .hero-head em { color: var(--gilt); }
+
+.hero-bio { color: var(--text-muted); font-size: 1.08rem; max-width: var(--measure); }
+.hero-bio a { text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+
+.home-menu { padding: 1.5rem 0 1rem; }
+.menu-label { display: block; margin: 0 0 .5rem; }
+
+@media (max-width: 640px) {
+  .hero { padding-top: 2.75rem; }
+  .hero-head { font-size: 2rem; }
+}

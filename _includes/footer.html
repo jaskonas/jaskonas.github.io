@@ -1,10 +1,16 @@
 <footer id="site-footer">
-  <div class="container">
-    <p class="foot-meta">
-      <span>Washington, DC</span>
-      <span aria-hidden="true">·</span>
-      <a href="mailto:askonas@cua.edu">askonas@cua.edu</a>
-    </p>
-    <p class="copyright">© {{ site.time | date: '%Y' }} Jon Askonas</p>
+  <div class="container footer-inner">
+    <div class="footer-mark">
+      <svg class="device" viewBox="0 0 64 64" width="58" height="58" role="img" aria-label="Engraved device — to be commissioned">
+        <rect x="2.5" y="2.5" width="59" height="59" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="32" y="30" text-anchor="middle" font-family="Cinzel, serif" font-size="6.5" letter-spacing="1.2" fill="currentColor">DEVICE</text>
+        <text x="32" y="41" text-anchor="middle" font-family="'Public Sans', sans-serif" font-size="4.4" letter-spacing=".3" fill="currentColor" opacity=".75">to be cut</text>
+      </svg>
+    </div>
+    <div class="colophon">
+      <p class="foot-name">Jonathan&nbsp;D.&nbsp;Askonas</p>
+      <p>Washington, DC &middot; <a href="mailto:askonas@cua.edu">askonas@cua.edu</a></p>
+      <p class="fineprint">Set in Cinzel, Source&nbsp;Serif&nbsp;4 &amp; Public&nbsp;Sans, after the Lapidary System. The engraved device is a placeholder pending commission. &copy; {{ site.time | date: '%Y' }} Jon Askonas.</p>
+    </div>
   </div>
 </footer>

@@ -1,0 +1,50 @@
+// Selectable lists. The Signal ❯ caret is retired; the Lapidary selection mark
+// is a gilt left-rule with the title set in the headline serif (oxblood when
+// active on light grounds). Keyboard nav (arrownav.js) is unchanged.
+.caret { display: none; }
+
+.arrow-list { list-style: none; margin: 0; padding: 0; }
+.arrow-list > li { border-bottom: 1px solid var(--rule-soft); }
+.arrow-list > li:last-child { border-bottom: 0; }
+
+.arrow-list > li > a {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: .9rem .9rem;
+  color: var(--text);
+  border-left: 2px solid transparent;
+}
+.arrow-list > li > a:hover { text-decoration: none; }
+
+.al-main {
+  font-family: var(--t-head);
+  font-weight: 600;
+  font-size: 1.12rem;
+  color: var(--text-strong);
+}
+.al-meta {
+  font-family: var(--t-body);
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin-top: .12rem;
+}
+
+// dated variant — year in a left gutter
+.arrow-list--dated > li > a { grid-template-columns: 3.2rem 1fr; column-gap: .9rem; align-items: baseline; }
+.al-year { font-family: var(--t-body); font-size: .82rem; color: var(--text-muted); }
+.al-body { display: block; }
+.arrow-list--dated .al-meta { grid-column: 2; }
+
+// active / focus state — gilt rule + oxblood title
+.arrow-list > li.is-active > a,
+.arrow-list > li > a:focus-visible {
+  background: var(--surface);
+  border-left-color: var(--gilt);
+  outline: none;
+}
+.arrow-list > li.is-active .al-main,
+.arrow-list > li > a:focus-visible .al-main { color: var(--red-brand); }
+.arrow-list > li.is-active .al-year { color: var(--red-brand); }
+:root[data-theme="dark"] .arrow-list > li.is-active .al-main,
+:root[data-theme="dark"] .arrow-list > li > a:focus-visible .al-main,
+:root[data-theme="dark"] .arrow-list > li.is-active .al-year { color: var(--gilt); }

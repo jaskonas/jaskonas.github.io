@@ -1,0 +1,55 @@
+// Header band: Oxford Blue in light mode (24% blue structure). In dark mode the
+// band is Midnight (= page ground) and structure comes from a gilt hairline,
+// per the dark-mode law (no navy-on-navy). Separation law: nav text on the blue
+// band is parchment/gilt — never red.
+#masthead { background: var(--band); }
+:root[data-theme="dark"] #masthead { border-bottom: 1px solid var(--rule); }
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: .95rem;
+  padding-bottom: .95rem;
+}
+
+.brand { text-decoration: none; }
+.brand:hover { text-decoration: none; }
+.brand .nameplate { font-size: 1.15rem; }
+
+.masthead-nav { display: flex; align-items: center; gap: 1.3rem; }
+
+.top-nav { display: flex; flex-wrap: wrap; gap: 1.15rem; }
+.top-nav a {
+  font-family: var(--t-body);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--band-muted);
+  text-transform: lowercase;
+}
+.top-nav a:hover { color: var(--band-text); text-decoration: none; }
+.top-nav a[aria-current="page"] { color: var(--name); } // current page → gilt
+
+.theme-toggle {
+  font-family: var(--t-body);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--band-muted);
+  background: transparent;
+  border: 1px solid var(--band-muted);
+  border-radius: 2px;
+  padding: .32rem .55rem;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--band-text); border-color: var(--band-text); }
+
+@media (max-width: 640px) {
+  .masthead-inner { flex-direction: column; align-items: flex-start; gap: .65rem; }
+  .masthead-nav { width: 100%; justify-content: space-between; gap: .8rem; }
+  .top-nav { gap: .8rem .9rem; }
+}

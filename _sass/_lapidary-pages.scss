@@ -1,0 +1,70 @@
+.page { padding: 3rem 0 0; }
+.page-head { margin-bottom: 2.2rem; }
+// page eyebrow (front-matter `kicker`), styled in the Titling role
+.page-head .kicker {
+  display: block;
+  margin-bottom: .9rem;
+  font-family: var(--t-title);
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+.page-head h1 { margin: 0; font-size: 2.4rem; }
+.page-lead { color: var(--text-muted); font-size: 1.12rem; max-width: var(--measure); margin: 1rem 0 0; }
+.page-body { max-width: var(--measure); }
+.page-body h2 { font-size: 1.6rem; color: var(--text-strong); margin-top: 2.4rem; }
+.page-body--wide { max-width: var(--frame); }
+
+// book projects
+.book { margin: 0 0 3rem; }
+.book-img { width: 100%; border: 1px solid var(--rule-soft); border-radius: 2px; display: block; margin-bottom: 1rem; }
+.book h2 { margin: 0 0 .5rem; }
+.book .status {
+  font-family: var(--t-title);
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+
+.entry-title { color: var(--text-strong); }
+.entry-venue { color: var(--text-muted); font-style: italic; }
+
+// ── Tufte margin abstract (Writing), in the Lapidary register ──
+.writing-layout { position: relative; }
+.inline-abstract {
+  font-family: var(--t-head);
+  font-size: .98rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0 .9rem .9rem calc(3.2rem + .9rem);
+}
+html.js .inline-abstract { display: none; }
+
+.margin { display: none; }
+.note { opacity: 0; transition: top .18s ease, opacity .18s ease; }
+.note.is-shown { opacity: 1; }
+.note-meta {
+  font-family: var(--t-title);
+  font-weight: 700;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+  margin: 0 0 .5rem;
+}
+.note-title { font-family: var(--t-head); font-style: italic; font-size: 1.05rem; line-height: 1.25; color: var(--text-strong); margin: 0 0 .5rem; }
+.note-abstract { font-family: var(--t-head); font-size: 1rem; line-height: 1.5; color: var(--text-muted); margin: 0; }
+
+@media (min-width: 901px) {
+  html.js .writing-layout { display: grid; grid-template-columns: minmax(0, 38rem) 1fr; column-gap: 2.5rem; }
+  html.js .margin { display: block; position: relative; }
+  html.js .note { position: absolute; left: 0; right: 0; border-left: 1px solid var(--gilt); padding-left: 1.1rem; }
+}
+@media (max-width: 900px) {
+  html.js li.is-active .inline-abstract { display: block; }
+}

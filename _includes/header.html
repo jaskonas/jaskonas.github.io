@@ -1,8 +1,11 @@
 <header id="masthead">
   <div class="container masthead-inner">
-    <a href="{{ '/' | relative_url }}" class="brand">JON ASKONAS</a>
-    <nav class="top-nav" role="navigation" aria-label="Primary">
-      {% for link in site.data.navigation %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
-    </nav>
+    <a href="{{ '/' | relative_url }}" class="brand"><span class="nameplate">Jon Askonas</span></a>
+    <div class="masthead-nav">
+      <nav class="top-nav" role="navigation" aria-label="Primary">
+        {% for link in site.data.navigation %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode">Dark</button>
+    </div>
   </div>
 </header>
