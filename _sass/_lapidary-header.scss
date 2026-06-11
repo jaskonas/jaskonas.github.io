@@ -33,20 +33,24 @@
 .top-nav a[aria-current="page"] { color: var(--name); } // current page → gilt
 
 .theme-toggle {
-  font-family: var(--t-body);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--band-muted);
   background: transparent;
   border: 1px solid var(--band-muted);
   border-radius: 2px;
-  padding: .32rem .55rem;
+  padding: .3rem .4rem;
+  line-height: 0;
   cursor: pointer;
   transition: color .15s ease, border-color .15s ease;
 }
 .theme-toggle:hover { color: var(--band-text); border-color: var(--band-text); }
+.theme-toggle svg { display: block; }
+// moon in light (→ go dark), sun in dark (→ go light)
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 
 @media (max-width: 640px) {
   .masthead-inner { flex-direction: column; align-items: flex-start; gap: .65rem; }

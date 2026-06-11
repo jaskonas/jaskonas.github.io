@@ -1,20 +1,34 @@
-// Selectable lists. The Signal ❯ caret is retired; the Lapidary selection mark
-// is a gilt left-rule with the title set in the headline serif (oxblood when
-// active on light grounds). Keyboard nav (arrownav.js) is unchanged.
-.caret { display: none; }
-
+// Selectable lists. The selection mark is a left-rule + an arrow (→) that
+// appears on the active row, in the --select colour (slate in light, the
+// lawful Signal-Tint red in dark). Keyboard nav (arrownav.js) is unchanged.
 .arrow-list { list-style: none; margin: 0; padding: 0; }
 .arrow-list > li { border-bottom: 1px solid var(--rule-soft); }
 .arrow-list > li:last-child { border-bottom: 0; }
 
 .arrow-list > li > a {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding: .9rem .9rem;
+  padding: .9rem .9rem .9rem 1.35rem;
   color: var(--text);
   border-left: 2px solid transparent;
 }
 .arrow-list > li > a:hover { text-decoration: none; }
+
+// selection arrow — absolutely placed in the left padding (no layout shift)
+.caret {
+  position: absolute;
+  left: .3rem;
+  top: .95rem;
+  font-family: var(--t-body);
+  font-size: 0; // hide the literal ❯ from the markup
+  color: var(--select);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.caret::before { content: "\2192"; font-size: .92rem; line-height: 1; } // →
+@media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
 
 .al-main {
   font-family: var(--t-head);
@@ -35,16 +49,18 @@
 .al-body { display: block; }
 .arrow-list--dated .al-meta { grid-column: 2; }
 
-// active / focus state — gilt rule + oxblood title
+// active / focus state — rule + arrow + title in the --select colour
 .arrow-list > li.is-active > a,
 .arrow-list > li > a:focus-visible {
   background: var(--surface);
-  border-left-color: var(--gilt);
+  border-left-color: var(--select);
   outline: none;
 }
+.arrow-list > li.is-active .caret,
+.arrow-list > li > a:focus-visible .caret { opacity: 1; transform: none; }
 .arrow-list > li.is-active .al-main,
-.arrow-list > li > a:focus-visible .al-main { color: var(--red-brand); }
-.arrow-list > li.is-active .al-year { color: var(--red-brand); }
-:root[data-theme="dark"] .arrow-list > li.is-active .al-main,
-:root[data-theme="dark"] .arrow-list > li > a:focus-visible .al-main,
-:root[data-theme="dark"] .arrow-list > li.is-active .al-year { color: var(--gilt); }
+.arrow-list > li.is-active .entry-title,
+.arrow-list > li > a:focus-visible .al-main,
+.arrow-list > li > a:focus-visible .entry-title { color: var(--select-text); }
+.arrow-list > li.is-active .al-year,
+.arrow-list > li > a:focus-visible .al-year { color: var(--select-text); }
