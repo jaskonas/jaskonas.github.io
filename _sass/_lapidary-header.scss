@@ -47,7 +47,7 @@
 
 // Expanded: full name visible, monogram hidden
 .brand-full { max-width: 22rem; opacity: 1; transition: max-width .35s ease, opacity .2s ease; }
-.brand-mono { max-width: 0; opacity: 0; transition: max-width .35s ease .15s, opacity .25s ease .15s; }
+.brand-mono { max-width: 0; opacity: 0; letter-spacing: -.05em; transition: max-width .35s ease .15s, opacity .25s ease .15s; }
 
 // Compact (scrolled): name collapses, monogram expands
 #masthead.is-scrolled .brand-full { max-width: 0; opacity: 0; transition: max-width .3s ease, opacity .15s ease; }

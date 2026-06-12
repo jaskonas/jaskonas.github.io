@@ -88,8 +88,14 @@
       li.addEventListener("mouseenter", function () { activate(list, i, false); });
       var a = li.querySelector("a");
       if (a) {
-        // Keyboard users tabbing in engage the list too.
         a.addEventListener("focus", function () { activate(list, i, false); });
+      }
+    });
+
+    // Release keyboard capture when the mouse leaves and no item holds focus.
+    list.addEventListener("mouseleave", function () {
+      if (activeList === list && !list.contains(document.activeElement)) {
+        activeList = null;
       }
     });
 

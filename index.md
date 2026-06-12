@@ -1,7 +1,6 @@
 ---
 layout: home
 permalink: /
-title: ""
 image:
   feature: mirv3.png
 ---
