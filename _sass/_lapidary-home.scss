@@ -1,6 +1,20 @@
-.hero { padding: 4rem 0 1.5rem; }
+// padding-block keeps the horizontal padding inherited from .container intact
+// (a `padding: x 0 y` shorthand would zero it and go wall-to-wall on mobile).
+.hero { padding-block: 4rem 1.5rem; }
 .hero-eyebrow { display: block; margin-bottom: 1.2rem; }
+
+// Grid: h1 + bio in left column, engraving spans both rows on right.
+.hero-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-rows: auto auto;
+  column-gap: 3rem;
+  align-items: start;
+}
+
 .hero-head {
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--t-head);
   font-weight: 600;
   font-size: 2.6rem;
@@ -9,15 +23,57 @@
   max-width: 34rem;
   margin: 0 0 1.4rem;
 }
-// Emphasis runs in oxblood on light grounds (red on white is lawful — the ground
-// sits between red and blue). On Midnight, red can't set text, so it shifts to gilt.
+// Emphasis in oxblood on light (red/white/blue separation law). On Midnight, shifts to gilt.
 .hero-head em { font-style: italic; color: var(--red-brand); }
 :root[data-theme="dark"] .hero-head em { color: var(--gilt); }
 
-.hero-bio { color: var(--text-muted); font-size: 1.08rem; max-width: var(--measure); }
+.hero-bio {
+  grid-column: 1;
+  grid-row: 2;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  max-width: var(--measure);
+}
 .hero-bio a { text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
 
-.home-menu { padding: 1.5rem 0 1rem; }
+// Portrait engraving — CSS luminance mask, colour driven by background-color.
+// Light is a cameo: the inverted copy inks the dark background + shadows in deep
+// oxblood while the lit face drops to white relief.
+// Dark uses the original so the lit face glows gilt on midnight.
+.hero-engraving {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: stretch;
+  background: var(--red-deep); // deep oxblood ink — avoids pink fringing on white
+  mask-image: url('/images/jonaskonas-engraving-inv.png');
+  mask-mode: luminance;
+  mask-size: cover;
+  mask-position: center top;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('/images/jonaskonas-engraving-inv.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center top;
+  -webkit-mask-repeat: no-repeat;
+}
+
+:root[data-theme="dark"] .hero-engraving {
+  background: var(--gilt);
+  mask-image: url('/images/jonaskonas-engraving.png');
+  -webkit-mask-image: url('/images/jonaskonas-engraving.png');
+}
+
+@media (max-width: 800px) {
+  .hero-body { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .hero-head { grid-row: 1; }
+  .hero-bio { grid-row: 2; }
+  .hero-engraving { grid-column: 1; grid-row: 3; width: 160px; height: 160px; align-self: start; }
+}
+@media (max-width: 640px) {
+  .hero { padding-top: 2.75rem; }
+  .hero-head { font-size: 2rem; }
+}
+
+.home-menu { padding-block: 1.5rem 1rem; }
 .menu-label { display: block; margin: 0 0 .5rem; }
 
 @media (max-width: 640px) {

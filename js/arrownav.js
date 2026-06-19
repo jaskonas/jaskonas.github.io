@@ -113,8 +113,21 @@
   window.addEventListener("resize", repositionAll);
 
   document.addEventListener("keydown", function (e) {
-    if (!activeList || !activeList._items) return;
     var k = e.key;
+    var isNav = k === "ArrowDown" || k === "j" || k === "ArrowUp" || k === "k";
+
+    // First nav keypress with nothing engaged yet: grab the first list and
+    // jump in (top for down/j, bottom for up/k) instead of swallowing the key.
+    if (isNav && (!activeList || !activeList._items)) {
+      if (!lists.length || !lists[0]._items) return;
+      e.preventDefault();
+      var down = k === "ArrowDown" || k === "j";
+      activate(lists[0], down ? 0 : lists[0]._items.length - 1, true);
+      focusActive();
+      return;
+    }
+
+    if (!activeList || !activeList._items) return;
     if (k === "ArrowDown" || k === "j") {
       e.preventDefault();
       activeList._move(activeList._idx + 1, true);
