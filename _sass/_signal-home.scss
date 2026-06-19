@@ -1,0 +1,22 @@
+.hero { padding: 4.5rem 0 1rem; }
+.hero .kicker { display: block; margin-bottom: 1.4rem; }
+.hero-head {
+  font-size: 3rem;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  max-width: 56rem;
+  margin: 0 0 1.6rem;
+}
+.hero-head em { color: var(--gold); }
+.hero-bio { color: var(--dim); font-size: 1.12rem; max-width: var(--measure); }
+// 40% gold — derived from --gold (#f5b942); CSS can't apply alpha to a hex custom property directly
+.hero-bio a { border-bottom: 1px solid rgba(245, 185, 66, 0.4); }
+.hero-bio a:hover { text-decoration: none; border-bottom-color: var(--gold); }
+
+.home-menu { padding: 2.5rem 0 1rem; }
+.menu-label { margin: 0 0 0.5rem 0.5rem; }
+
+@media (max-width: $bp-mobile) {
+  .hero { padding-top: 3rem; }
+  .hero-head { font-size: 2.1rem; }
+}

@@ -1,0 +1,94 @@
+// Header band: Oxford Blue in light mode (24% blue structure). In dark mode the
+// band is Midnight (= page ground) and structure comes from a gilt hairline,
+// per the dark-mode law (no navy-on-navy). Separation law: nav text on the blue
+// band is parchment/gilt — never red.
+#masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--band);
+  transition: box-shadow .2s ease;
+}
+#masthead.is-scrolled { box-shadow: 0 1px 10px rgba(0,0,0,.22); }
+:root[data-theme="dark"] #masthead { border-bottom: 1px solid var(--rule); }
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: .95rem;
+  padding-bottom: .95rem;
+  transition: padding .25s ease;
+}
+#masthead.is-scrolled .masthead-inner { padding-top: .55rem; padding-bottom: .55rem; }
+
+.brand { text-decoration: none; }
+.brand:hover { text-decoration: none; }
+
+// Gilt rounded box — present in both expanded and compact states
+.brand-box {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--gilt);
+  border-radius: 50px;
+  padding: .35rem 1.1rem;
+}
+
+.brand-full,
+.brand-mono {
+  font-family: var(--t-title);
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+  color: var(--name);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Expanded: full name visible, monogram hidden
+.brand-full { max-width: 22rem; opacity: 1; transition: max-width .35s ease, opacity .2s ease; }
+.brand-mono { max-width: 0; opacity: 0; letter-spacing: -.05em; transition: max-width .35s ease .15s, opacity .25s ease .15s; }
+
+// Compact (scrolled): name collapses, monogram expands
+#masthead.is-scrolled .brand-full { max-width: 0; opacity: 0; transition: max-width .3s ease, opacity .15s ease; }
+#masthead.is-scrolled .brand-mono { max-width: 3.5rem; opacity: 1; transition: max-width .35s ease .12s, opacity .25s ease .12s; }
+
+.masthead-nav { display: flex; align-items: center; gap: 1.3rem; }
+
+.top-nav { display: flex; flex-wrap: wrap; gap: 1.15rem; }
+.top-nav a {
+  font-family: var(--t-body);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--band-muted);
+  text-transform: lowercase;
+}
+.top-nav a:hover { color: var(--band-text); text-decoration: none; }
+.top-nav a[aria-current="page"] { color: var(--name); } // current page → gilt
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--band-muted);
+  background: transparent;
+  border: 1px solid var(--band-muted);
+  border-radius: 2px;
+  padding: .3rem .4rem;
+  line-height: 0;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--band-text); border-color: var(--band-text); }
+.theme-toggle svg { display: block; }
+// moon in light (→ go dark), sun in dark (→ go light)
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+@media (max-width: 640px) {
+  .masthead-inner { flex-direction: column; align-items: flex-start; gap: .65rem; }
+  .masthead-nav { width: 100%; justify-content: space-between; gap: .8rem; }
+  .top-nav { gap: .8rem .9rem; }
+}

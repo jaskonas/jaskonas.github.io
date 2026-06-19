@@ -1,3 +1,10 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+.superpowers/
+.DS_Store
+
+# Local-only design/brand resources, never served or committed
+_resources/
+.Rhistory

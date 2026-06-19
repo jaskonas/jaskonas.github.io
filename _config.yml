@@ -1,5 +1,5 @@
 # Site wide configuration
-description: "Jon Askonas — political scientist, military historian, and technology scholar at the Catholic University of America and the U.S. Department of State Policy Planning Staff."
+description: "Jon Askonas — writer and political theorist on technology, war, and the American future."
 locale: en
 logo: ~
 path: atom.xml
@@ -32,8 +32,9 @@ google_analytics: UA-113136414-2
 #Site owner
 avatar: jaskonas_portrait.png
 name: "Jon Askonas"
-owner: "Jon Askonas"
-twitter: "@jonaskonas"
+owner:
+  name: "Jon Askonas"
+  twitter: jonaskonas
 
 include:
   - .htaccess
@@ -61,3 +62,4 @@ exclude:
   - package.json
   - spec
   - tmp
+  - docs

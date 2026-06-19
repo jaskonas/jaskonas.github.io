@@ -1,10 +1,19 @@
 <header id="masthead">
-  <div class="inner-wrap">
-    <a href="{{ site.url }}/" class="site-title"><span class="ascii-logo" aria-hidden="true">&#x250C;&#x2500;&#x2500;&#x2510;
-&#x2502;JA&#x2502;
-&#x2514;&#x2500;&#x2500;&#x2518;</span>{{ site.title }}</a>
-    <nav role="navigation" class="menu top-menu">
-        {% include navigation.html %}
-    </nav>
-  </div><!-- /.inner-wrap -->
-</header><!-- /.masthead -->
+  <div class="container masthead-inner">
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="Jon Askonas — home">
+      <span class="brand-box">
+        <span class="brand-full">Jon Askonas</span>
+        <span class="brand-mono" aria-hidden="true">JDA</span>
+      </span>
+    </a>
+    <div class="masthead-nav">
+      <nav class="top-nav" role="navigation" aria-label="Primary">
+        {% for link in site.data.navigation %}<a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" aria-pressed="false">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>

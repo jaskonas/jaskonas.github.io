@@ -1,0 +1,66 @@
+// Selectable lists. The selection mark is a left-rule + an arrow (→) that
+// appears on the active row, in the --select colour (slate in light, the
+// lawful Signal-Tint red in dark). Keyboard nav (arrownav.js) is unchanged.
+.arrow-list { list-style: none; margin: 0; padding: 0; }
+.arrow-list > li { border-bottom: 1px solid var(--rule-soft); }
+.arrow-list > li:last-child { border-bottom: 0; }
+
+.arrow-list > li > a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: .9rem .9rem .9rem 1.35rem;
+  color: var(--text);
+  border-left: 2px solid transparent;
+}
+.arrow-list > li > a:hover { text-decoration: none; }
+
+// selection arrow — absolutely placed in the left padding (no layout shift)
+.caret {
+  position: absolute;
+  left: .3rem;
+  top: 50%; // vertically centred in the row regardless of 1 or 2 lines
+  font-family: var(--t-body);
+  font-size: 0; // hide the literal ❯ from the markup
+  color: var(--select);
+  opacity: 0;
+  transform: translate(-4px, calc(-50% - 2px));
+  transition: opacity .12s ease, transform .12s ease;
+}
+.caret::before { content: "\203A"; font-size: 1.1rem; line-height: 1; } // ›
+@media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
+
+.al-main {
+  font-family: var(--t-head);
+  font-weight: 600;
+  font-size: 1.12rem;
+  color: var(--text-strong);
+}
+.al-meta {
+  font-family: var(--t-body);
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin-top: .12rem;
+}
+
+// dated variant — year in a left gutter
+.arrow-list--dated > li > a { grid-template-columns: 3.2rem 1fr; column-gap: .9rem; align-items: start; }
+.al-year { font-family: var(--t-body); font-size: .82rem; color: var(--text-muted); align-self: center; }
+.al-body { display: block; }
+.arrow-list--dated .al-meta { grid-column: 2; }
+
+// active / focus state — rule + arrow + title in the --select colour
+.arrow-list > li.is-active > a,
+.arrow-list > li > a:focus-visible {
+  background: var(--surface);
+  border-left-color: var(--select);
+  outline: none;
+}
+.arrow-list > li.is-active .caret,
+.arrow-list > li > a:focus-visible .caret { opacity: 1; transform: translate(0, calc(-50% - 2px)); }
+.arrow-list > li.is-active .al-main,
+.arrow-list > li.is-active .entry-title,
+.arrow-list > li > a:focus-visible .al-main,
+.arrow-list > li > a:focus-visible .entry-title { color: var(--select-text); }
+.arrow-list > li.is-active .al-year,
+.arrow-list > li > a:focus-visible .al-year { color: var(--select-text); }

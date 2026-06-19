@@ -1,0 +1,62 @@
+// The Lapidary System — web-tier design tokens (light + dark)
+:root {
+  // ── raw palette ──
+  --white:#ffffff; --parchment:#faf6ee; --cloud:#e9ecef;
+  --oxford:#002147; --midnight:#0d1321; --elevated:#141c30;
+  --red-deep:#6b1423; --red-brand:#aa1a2d; --red-signal:#d01319; --red-tint:#e8505b;
+  --gilt:#c8a951; --steel:#7d98b3; --slate:#4e5b6e; --ink:#1c1c1c;
+  --parchment-rule:#e8e0d2; // soft warm divider on light grounds
+
+  // ── type roles (free tier) ──
+  --t-title:"Cinzel", Georgia, serif;                 // Titling: nameplate + eyebrows only
+  --t-head:"Source Serif 4", Georgia, "Times New Roman", serif; // Headline: H1–H3
+  --t-body:"Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  // ── metrics ──
+  --frame:62rem;    // outer page frame
+  --measure:42rem;  // reading column
+  --pad:1.75rem;
+
+  // ── semantic (LIGHT mode) ──
+  --bg:var(--white);
+  --surface:var(--parchment);
+  --text:var(--ink);
+  --text-strong:var(--oxford);    // headlines: Oxford Blue on light
+  --text-muted:var(--slate);      // captions / metadata
+  --rule:var(--gilt);             // gilt hairline accents
+  --rule-soft:var(--parchment-rule);
+  --link:var(--red-signal);       // body links (5.5:1 AA on white)
+  --link-hover:var(--red-deep);
+  --eyebrow:var(--red-brand);     // eyebrows / status: oxblood on grounds
+  --band:var(--oxford);           // header band ground
+  --band-text:var(--parchment);   // nav text on the band
+  --band-muted:#9fb0c4;           // resting nav on the band
+  --name:var(--gilt);             // nameplate ink (gilt on Oxford Blue = lawful)
+  --device:var(--red-brand);      // engraved device: black-line oxblood on light
+  --select:var(--slate);          // list selection: rule + arrow + title (light → slate)
+  --select-text:var(--slate);
+}
+
+// ── DARK mode (Midnight) ──
+// Oxford Blue is invisible on Midnight (1.16:1): structure comes from Elevated
+// surfaces + hairlines, never navy-on-navy. Gilt is promoted to the text accent.
+// Red never sets text on Midnight, so eyebrows shift to Steel and links to Signal Tint.
+:root[data-theme="dark"] {
+  --bg:var(--midnight);
+  --surface:var(--elevated);
+  --text:var(--parchment);
+  --text-strong:var(--parchment);
+  --text-muted:#9aa3b2;
+  --rule:var(--gilt);
+  --rule-soft:#243049;
+  --link:var(--red-tint);
+  --link-hover:var(--gilt);
+  --eyebrow:var(--steel);
+  --band:var(--midnight);
+  --band-text:var(--parchment);
+  --band-muted:#9aa3b2;
+  --name:var(--gilt);
+  --device:var(--gilt);
+  --select:var(--gilt);           // dark-mode selection: gilt rule + arrow + title
+  --select-text:var(--gilt);
+}

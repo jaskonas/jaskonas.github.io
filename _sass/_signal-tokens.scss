@@ -1,0 +1,22 @@
+// Signal theme design tokens
+:root {
+  --bg:    #0e1116;
+  --panel: #11151b;
+  --line:  #1e242d;
+  --line2: #2a323d;
+  --ink:   #e7e3da;
+  --dim:   #9aa4b2;
+  --mut:   #6b7480;
+  --gold:  #f5b942;
+  --ink-hi: #f4f1ea;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --frame:   60rem;      // outer page frame (header, hero, menu, footer)
+  --measure: 42rem;      // ~672px reading column for prose
+  --pad:     2rem;
+}
+
+$bp-mobile: 640px;
