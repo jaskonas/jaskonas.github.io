@@ -34,6 +34,33 @@
 .entry-title { color: var(--text-strong); }
 .entry-venue { color: var(--text-muted); font-style: italic; }
 
+// ── Square CTA button (Titling caps, oxblood ground, gilt hover) ──
+.cta-button {
+  display: inline-block;
+  background: var(--red-brand);
+  color: var(--white);
+  font-family: var(--t-title);
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 1rem 1.8rem;
+  border: 1px solid var(--red-brand);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.cta-button:hover,
+.cta-button:focus {
+  background: var(--red-deep);
+  border-color: var(--gilt);
+  color: var(--white);
+}
+:root[data-theme="dark"] .cta-button { color: var(--midnight); background: var(--gilt); border-color: var(--gilt); }
+:root[data-theme="dark"] .cta-button:hover,
+:root[data-theme="dark"] .cta-button:focus { background: var(--red-brand); border-color: var(--gilt); color: var(--white); }
+
 // ── Tufte margin abstract (Writing), in the Lapidary register ──
 .writing-layout { position: relative; }
 .inline-abstract {
