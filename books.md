@@ -18,5 +18,5 @@ excerpt: "Book projects by Jon Askonas."
   <img class="book-img" src="{{ '/images/jaskonas_awghero.png' | relative_url }}" alt="The Shot in the Dark">
   <h2><em>The Shot in the Dark: A History of the U.S. Army Asymmetric Warfare Group, 2006–2021</em></h2>
   <p class="status">Under contract with the U.S. Army</p>
-  <p>A history of the Asymmetric Warfare Group, the Army's experiment in rapid battlefield adaptation, from its founding through its 2021 disestablishment — based on extensive interviews and archival research. To be published by the Center of Military History or Army University Press.</p>
+  <p>A history of the Asymmetric Warfare Group, the Army's experiment in rapid battlefield adaptation, from its founding through its 2021 disestablishment — based on extensive interviews and archival research.</p>
 </div>
